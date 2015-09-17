@@ -9,6 +9,9 @@ class ActiveSupport::TestCase
   fixtures :all
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
   # Returns true if a test user is logged in.
   def is_logged_in?
     !session[:user_id].nil?
@@ -33,7 +36,10 @@ class ActiveSupport::TestCase
     def integration_test?
       defined?(post_via_redirect)
     end
+<<<<<<< HEAD
 =======
   # Add more helper methods to be used by all tests here...
 >>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
+=======
+>>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
 end
