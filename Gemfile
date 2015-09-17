@@ -33,7 +33,11 @@ group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
 <<<<<<< HEAD
+<<<<<<< HEAD
   gem 'puma',           '2.11.1'
 =======
 >>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
+=======
+  gem 'puma',           '2.11.1'
+>>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
 end

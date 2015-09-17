@@ -125,10 +125,15 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
 <<<<<<< HEAD
+<<<<<<< HEAD
     puma (2.11.1)
       rack (>= 1.1, < 2.0)
 =======
 >>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
+=======
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
+>>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -223,9 +228,13 @@ DEPENDENCIES
   minitest-reporters (= 1.0.5)
   pg (= 0.17.1)
 <<<<<<< HEAD
+<<<<<<< HEAD
   puma (= 2.11.1)
 =======
 >>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
+=======
+  puma (= 2.11.1)
+>>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
   rails (= 4.2.2)
   rails_12factor (= 0.0.2)
   sass-rails (= 5.0.2)
