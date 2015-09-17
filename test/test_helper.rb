@@ -8,6 +8,7 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
+<<<<<<< HEAD
   # Returns true if a test user is logged in.
   def is_logged_in?
     !session[:user_id].nil?
@@ -32,4 +33,7 @@ class ActiveSupport::TestCase
     def integration_test?
       defined?(post_via_redirect)
     end
+=======
+  # Add more helper methods to be used by all tests here...
+>>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
 end
