@@ -1,26 +1,15 @@
 class User < ActiveRecord::Base
-<<<<<<< HEAD
-<<<<<<< HEAD
-	attr_accessor :remember_token
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
-=======
-	attr_accessor :remember_token
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
-	before_save { email.downcase! }
-	validates :name,  presence: true, length: { maximum: 50 }
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-	validates :email, presence: true, length: { maximum: 255 },
-				format: { with: VALID_EMAIL_REGEX },
-				uniqueness: { case_sensitive: false }
-	has_secure_password
-	validates :password, presence: true, length: { minimum: 6 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
+  attr_accessor :remember_token
+  before_save { email.downcase! }
+  validates :name,  presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+        format: { with: VALID_EMAIL_REGEX },
+        uniqueness: { case_sensitive: false }
+  has_secure_password
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-	# Returns the hash digest of the given string.
+  # Returns the hash digest of the given string.
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
@@ -40,7 +29,7 @@ class User < ActiveRecord::Base
 
   # Returns true if the given token matches the digest.
   def authenticated?(remember_token)
-  	return false if remember_digest.nil?
+    return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
@@ -48,9 +37,4 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
-<<<<<<< HEAD
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
-=======
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
 end

@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
+	before_action :logged_in_user, only: [:index, :edit, :update]
+	before_action :correct_user,   only: [:edit, :update]
+
+	def index
+		#variable containinbg all the sites users.
+		@users = User.all
+  	end
 
 	def show
 		@user = User.find(params[:id])
@@ -12,14 +18,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-<<<<<<< HEAD
-<<<<<<< HEAD
 			log_in @user
-=======
->>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
-=======
-			log_in @user
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
 			flash[:success] = "Welcome to the Sample App!"
 			redirect_to @user
 		else
@@ -27,14 +26,41 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+	      	flash[:success] = "Profile updated"
+      		redirect_to @user
+	  else
+	  	render 'edit'
+	  end
+	end
+
 	private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+	def user_params
+		params.require(:user).permit(:name, :email, :password,
+			:password_confirmation)
+	end
+
+	# Before filters
+
+    # Confirms a logged-in user.
+    def logged_in_user
+      unless logged_in?
+      	store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
     end
-=======
-  def new
-  end
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
 end

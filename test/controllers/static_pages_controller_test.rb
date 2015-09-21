@@ -24,9 +24,5 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
   end
+end
 
-<<<<<<< HEAD
-end
-=======
-end
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e

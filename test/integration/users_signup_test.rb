@@ -11,13 +11,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                password_confirmation: "bar" }
     end
     assert_template 'users/new'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
-=======
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
   end
 
   test "valid signup information" do
@@ -29,16 +22,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             password_confirmation: "password" }
     end
     assert_template 'users/show'
-<<<<<<< HEAD
-<<<<<<< HEAD
     assert is_logged_in?
     assert_not flash.nil?
-=======
->>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
-=======
-    assert is_logged_in?
-    assert_not flash.nil?
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
   end
   
 end

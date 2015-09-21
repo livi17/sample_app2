@@ -4,7 +4,7 @@ class UserTest < ActiveSupport::TestCase
 
   def setup
     @user = User.new(name: "Example User", email: "user@example.com",
-    	password: "foobar", password_confirmation: "foobar")
+      password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -47,14 +47,11 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
 
-<<<<<<< HEAD
   test "password should be present (nonblank)" do
     @user.password = @user.password_confirmation = " " * 6
     assert_not @user.valid?
   end
 
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
   test "email addresses should be saved as lower-case" do
     mixed_case_email = "Foo@ExAMPle.CoM"
     @user.email = mixed_case_email
@@ -62,7 +59,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
 
-<<<<<<< HEAD
   test "password should have a minimum length" do
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
@@ -70,18 +66,5 @@ class UserTest < ActiveSupport::TestCase
 
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')
-<<<<<<< HEAD
-=======
-  test "password should be present (nonblank)" do
-    @user.password = @user.password_confirmation = " " * 6
-    assert_not @user.valid?
-  end
-
-  test "password should have a minimum length" do
-    @user.password = @user.password_confirmation = "a" * 5
-    assert_not @user.valid?
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
-=======
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
   end
 end

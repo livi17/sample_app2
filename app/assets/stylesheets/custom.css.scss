@@ -5,15 +5,12 @@
 
 $gray-medium-light: #eaeaea;
 
-<<<<<<< HEAD
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
 
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
 /* universal */
 
 body {
@@ -104,7 +101,6 @@ footer {
       margin-left: 15px;
     }
   }
-<<<<<<< HEAD
 }
 
 /* miscellaneous */
@@ -183,10 +179,6 @@ input {
   .form-control {
     color: $state-danger-text;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
 }
 
 .checkbox {
@@ -201,11 +193,16 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
-<<<<<<< HEAD
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
-=======
->>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
-=======
->>>>>>> 38de17839351a99cc66f94d7bee4037156d822b5
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }

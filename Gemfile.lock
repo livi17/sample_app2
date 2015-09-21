@@ -38,13 +38,9 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (6.0.3)
-<<<<<<< HEAD
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
-=======
-    bcrypt (3.1.7)
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
@@ -67,6 +63,8 @@ GEM
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.6.0)
+    faker (1.4.2)
+      i18n (~> 0.5)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -124,16 +122,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-<<<<<<< HEAD
-<<<<<<< HEAD
     puma (2.11.1)
       rack (>= 1.1, < 2.0)
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
-=======
-    puma (2.11.1)
-      rack (>= 1.1, < 2.0)
->>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -213,28 +203,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
   bcrypt-ruby
-=======
-  bcrypt (= 3.1.7)
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
   bootstrap-sass (= 3.2.0.0)
   byebug (= 3.4.0)
   coffee-rails (= 4.1.0)
+  faker (= 1.4.2)
   guard-minitest (= 2.3.1)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
   mini_backtrace (= 0.1.3)
   minitest-reporters (= 1.0.5)
   pg (= 0.17.1)
-<<<<<<< HEAD
-<<<<<<< HEAD
   puma (= 2.11.1)
-=======
->>>>>>> 8c6d0f52cec756dceec7e97d07eb2d9b7c0cc35e
-=======
-  puma (= 2.11.1)
->>>>>>> afbad50d7a17ff288ee45b1d3494bb4293ca1b6e
   rails (= 4.2.2)
   rails_12factor (= 0.0.2)
   sass-rails (= 5.0.2)
